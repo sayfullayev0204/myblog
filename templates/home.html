@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sayfullayev-dev</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Custom styles go here */
+    footer {
+      background-color: #000000; /* Footer foni */
+      color: #fff; /* Footer matni rangi */
+      padding: 20px 0; /* Footer ustida va pastdagi joylashuvini belgilash */
+      text-align: center; /* Footer matnni markazga joylash */
+    }
+    footer .social-icons a {
+      color: #fff; /* Ikon rangi */
+      margin: 0 10px; /* Ikonlar orasidagi bo'shliqlar */
+      transition: transform 0.3s ease; /* Animatsiya o'zgaruvchanligi */
+    }
+    footer .social-icons a:hover {
+      transform: scale(1.2); /* Hover qilganda ikonlarni kattalashtirish */
+    }
+    </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black;">
+    <div class="container" >
+      <a class="navbar-brand" href="#">S G S</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" style="color: white;" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"style="color: white;" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"style="color: white;" href="{% url 'code' %}">Foydali</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"style="color: white;" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- First Column for Image -->
+        <div class="col-md-6">
+          <img src="/media/my.jpg" style=" height: 370px; border-radius: 12px;" alt="Image" class="img-fluid">
+        </div>
+        <!-- Second Column for Text -->
+        <div class="col-md-6">
+            <h1 style="margin-top: 20px;">Sayfullayev G'ayrat</h1>
+            <p style="color: black; font-size: 20px;">Student at TATU University</p>
+            <p style="color: black;font-size: 20px;  ">Back End Developer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- First Column for Image -->
+        <div class="col-md-4">
+          <img src="/media/al.jpg" style="height: 250px; border-radius: 12px;" alt="Blog Image 1" class="img-fluid mb-3">
+          <p style="color: black;">Axborot kommunikatsiya texnalogiyalari va aloqa harbiy institutiga sayoxat.</p>
+          <p style="color: #485deb;">06.02.2024</p>
+        </div>
+        <div class="col-md-4">
+            <img src="/media/se.jpg" style="height: 250px; border-radius: 12px;" alt="Blog Image 1" class="img-fluid mb-3">
+            <p style="color: black;">TATU qarshi filiali</p>
+            <p style="color: black;">3-semester natijasi</p>
+            <p style="color: #485deb;">12.02.2024</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-4">
+    <div class="container">
+      <h4 style="text-align: center;">Xabar jo'natish</h4>
+      <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label for="email">Emailingiz:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Xabaringiz:</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="social-icons">sayfullayev-dev.com   2024
+      <a href="https://t.me/sayfullayev_0204"><i class="fab fa-telegram"></i></a>
+      <a href="https://instagram.com/sayfullayev_0204"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/sayfullayev_0204"><i class="fab fa-facebook"></i></a>
+      <a href="https://github.com/sayfullayev_0204"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
