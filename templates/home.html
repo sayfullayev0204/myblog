@@ -6,6 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sayfullayev-dev</title>
     <link rel="icon" href="/media/k.png" type="png">
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(
+                  function (position) {
+                      let latitude = position.coords.latitude;
+                      let longitude = position.coords.longitude;
+
+                      // Joylashuvni serverga yuborish
+                      let formData = new FormData();
+                      formData.append("latitude", latitude);
+                      formData.append("longitude", longitude);
+
+                      fetch("/save_location/", {
+                          method: "POST",
+                          body: formData,
+                          credentials: "include"
+                      }).then(response => response.json())
+                        .then(data => console.log("Ma'lumot yuborildi:", data))
+                        .catch(error => console.error("Xatolik:", error));
+                  },
+                  function (error) {
+                      console.error("Joylashuvni olishda xatolik:", error);
+                  }
+              );
+          } else {
+              console.error("Brauzeringiz joylashuvni qo‘llab-quvvatlamaydi.");
+          }
+      });
+  </script>
   </head>
   <body>
     <nav id="desktop-nav">
