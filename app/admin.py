@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import UserLocation
 
-# Register your models here.
+@admin.register(UserLocation)
+class UserLocationAdmin(admin.ModelAdmin):
+    list_display = ['latitude', 'longitude', 'timestamp']
